@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            width: 50%;
+            background-color: #ccc;
+        }
+        h1{
+            border: 2px solid red;
+            visibility: hidden;
+            /* Some com o elemento mas o espaço dele continua preenchido */
+        }
+        a{
+            background-color: yellow;
+            width: 200px;
+            /* largura em elementos de linha não faz nenhum efeito */
+            /* margin só funciona na horizontal */
+            /* NUNCA UTILIZAR PROPRIEDADES DO BOX MODEL EM ELEMENTOS DE LINHA */
+            display: block;
+            /* Acima mudei o comportamento do elemento de inline para block */
+            /* 
+            display: inline-block; 
+            - permite a junção dos dois 
+            - Posso aplicar margin e padding
+            - Palavras desse "a" permanecem no fluxo do texto
+            */
+        }
+    </style>
+</head>
+<body>
+    <h1>Display</h1>
+    <p>Lorem ipsum dolor sit, <a href="box_model/box_model.html">Box Model</a>. amet consectetur adipisicing elit. <b>Texto em negrito</b>. Accusamus, <i>Texto em itálico</i> consectetur ab illum ad quas aliquam, recusandae explicabo quidem quia facere earum iusto? Porro animi dolore natus, velit quaerat magnam laborum voluptatem exercitationem voluptatum placeat ipsa repudiandae odit temporibus enim totam nisi nobis accusantium sequi voluptates, quisquam reprehenderit?</p>
+</body>
+</html>

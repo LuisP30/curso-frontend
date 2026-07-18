@@ -1,0 +1,100 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ccc;
+}
+
+#banner{
+    background-image: url(imagens/bg-2.jpg);
+    height: 500px;
+    background-size: cover;
+    background-position: bottom center;
+    padding-top: 1px;
+}
+
+#box{
+    margin: 80px auto 0 auto;
+    width: 80%;
+    text-align: center;
+    color: white;
+}
+#box h1{
+    font-size: 56px;
+    text-shadow: 2px 2px 3px black;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+#box p{
+    background-color: rgba(0, 0, 0, 0.3);
+    font-size: 18px;
+    display: inline-block;
+    padding: 16px;
+    border-bottom: 2px solid;
+}
+#banner nav ul{
+    margin: 20px 80px 0 0;
+    text-align: right;
+}
+#banner nav li{
+    display: inline-block;
+    list-style-type: none;
+    border: 1px solid white;
+    margin-left: 16px;
+}
+
+#banner a{
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    padding: 16px;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+#banner nav a:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+main{
+    width: 80%;
+    max-width: 860px;
+    margin: auto;
+}
+article{
+    background-color: white;
+    padding: 16px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    /* As margens não se somam, apenas se sobrepõe */
+}
+article h2{
+    background-color: #eee;
+    border-bottom: 2px solid #ccc;
+    padding: 5px;
+    margin-top: 0; /* Por padrão o H2 já usa margim-top */
+}
+article a{
+    background-color: #cdc7c3;
+    display: block;
+    padding: 7px;
+    border-radius: 4px;
+    margin-left: auto;
+    width: fit-content;
+}
+/* No CSS também há o seletor:
+a.btn{
+Dessa forma estou formando apenas os elementos
+"a" que possuem a classe btn
+}
+*/
+
+#rodape{
+    color: white;
+    background-color: #6b6c68;
+    text-align: center;
+    padding: 30px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 2px black; /* Direita - Baixo - Esfumaçamento */
+}
