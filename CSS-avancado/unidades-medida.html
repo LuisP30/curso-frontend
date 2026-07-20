@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidades de medida</title>
+    <style>
+        html{
+            padding-bottom: 550px;
+            font-size: 62.5%; /*  62.5% de 16px = 10px */
+            /*
+            Com essa configuração acima, terei facilidade
+            para definir o tamanho em pixels através de em: 
+            
+            caso queria 16 pixels, posso colocar:
+            font-size: 1.6em;
+            18 pixels: 1.8em;
+            */
+        }
+        h1{
+            font-size: 3.4em;
+        }
+        b{
+            color: red;
+            font-size: 2em;
+            /* Como está definido 3rem (30px) no elemento pai 
+                2em aqui no elemento filho valerão 60px
+                (1em = 30px)
+                (2em = 60px)
+                (3em = 90px)
+            */
+        }
+        p{
+            /* font-size: 16px; */
+            /* Dessa forma eu travei o tamanho da font
+            em 16 pixels e pode ser que eu sobrescreva
+            as preferências do usuário */
+            /* ******************************************************************** */
+            /* UNIDADE DE MEDIDA "em"
+            - Ele é relativo ao valor definido no elemento pai
+            - 1em equivale a 16px 
+            - É iteressante utilizá-lo para se caso o usuário tiver
+            alguma configuração habilitada para aumentar o tamanho da fonte, essa
+            unidade de medida irá se adaptar as configurações do usuário */
+
+            /* font-size: 3em; Equivale a 30 pixels */
+
+            background-color: #ccc;
+            width: 15em;
+            font-size: 3em;
+        }
+        span{
+            color: green;
+            font-weight: bold;
+            /* ************************************************************************* */
+            /* UNIDADE DE MEDIDA "rem" 
+                - Usa como referência o tamanho da fonte do elemento raiz (html)
+            */
+            font-size: 3rem; /* Tem valor de 30px mesmo sendo filho do P */
+        }
+        .porcentagem{
+            width: 50%;
+            height: 500px;
+            background-color: yellow;
+        }
+        .porcentagem p {
+            /* Porcentagem sempre será relativo a largura do elemento pai 
+            mesmo em margin-top ou padding-top, por exemplo.
+            */
+            background-color: orange;
+            padding-top: 10%;
+            width: 50%;
+            font-size: 2rem;
+        }
+        .padding-em{
+            background-color: red;
+            padding: 0;
+        }
+        .padding-em p{
+            background-color: transparent;
+            margin: 0;
+            padding: 1em; /* Vale 10px */
+            font-size: 30px; /* Vale os mesmos 10px */
+            
+            /* Em propriedades como padding, margin, width, height,
+            gap e border-radius, o em é relativo ao FONT-SIZE do 
+            próprio elemento, e não do pai.
+            */
+        }
+        /* ********************************************************************* */
+        /* UNIDADES DE MEDIDA "vw" e "vh"
+        - São relativas ao tamanho da viewport (janela visível do navegador).
+        - Não utilizam como referência o elemento pai.
+
+        vw (viewport width)
+        - 100vw = 100% da largura da viewport.
+        - 50vw = 50% da largura da viewport.
+
+        vh (viewport height)
+        - 100vh = 100% da altura da viewport.
+        - 50vh = 50% da altura da viewport.
+
+        Essas unidades definem apenas o tamanho do elemento.
+        Elas NÃO definem sua posição na tela.
+        Se houver elementos acima dele, ele continuará sendo renderizado
+        abaixo deles, seguindo o fluxo normal do HTML.
+        */
+        .viewport-container{
+            font-size: 3rem;
+            height: auto;
+        }
+        .viewport{
+            width: 90vw;
+            height: 90vh;
+            background-color: rgba(0, 0, 255, 0.311);
+            border: 2px solid black;
+        }
+        .em{
+            width: 20em; /* vale 320px */
+            padding: 1em;
+            margin: 1em;
+            background-color: orange;
+            font-size: 2em;
+        }
+        /* ******************************************************************** */
+        /* UNIDADE DE MEDIDA "ch"
+        - É baseada na largura do caractere "0" (zero) da fonte utilizada.
+        - É muito útil para definir a largura de elementos que exibem texto.
+        - Quanto maior o font-size, maior será o valor de 1ch.
+        - Diferentes fontes podem ter valores de ch diferentes.
+        */
+        .ch{
+            width: 20ch; /* Aproximadamente a largura de 20 caracteres "0". */
+            padding: 1em;
+            margin: 1em;
+            background-color: orange;
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Unidades de medida</h1>
+    <p>Lorem ipsum dolor <b>unidade de medida EM</b> sit amet consectetur, adipisicing elit. At facilis error 
+        incidunt qui beatae, <span>unidade de medida REM</span> est labore recusandae repellat 
+        iure corporis, quae quod esse? Recusandae fugiat atque possimus?</p>
+    <!-- A fonte tem por padrão 16px -->
+
+    <div class="porcentagem">
+        <p>Unidade de medida %</p>
+    </div>
+
+    <div class="padding-em">
+        <p>padding com em</p>
+    </div>
+
+    <div class="porcentagem viewport-container">
+        <div class="viewport">viewport</div>
+    </div>
+
+    <div class="em">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Autem eius sequi repudiandae esse doloremque cupiditate minima harum 
+        mollitia earum aut!
+    </div>
+    <div class="ch">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Voluptates dolores aliquid odit alias porro excepturi harum vero, 
+        architecto beatae minima!
+    </div>
+</body>
+</html>
