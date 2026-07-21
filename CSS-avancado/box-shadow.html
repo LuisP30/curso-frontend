@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Box Shadow</title>
+    <style>
+        div{
+            background-color: orange;
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            border-radius: 70px 20px 0px 80px / 100px 50px 0 20px;
+
+            box-shadow: 10px 0px 10px 10px black, 0 20px 0 red, -10px 20px 0px blue, 0 -20px 5px 10px green;
+            /* É criado uma cópia do elemento por trás dele */
+            /* 
+            - primeiro valor: deslocamento horizontal 
+            - segundo valor: deslocamento vertical
+            - esfumaçamento
+            - ampliar sombra
+            - cor
+
+            adiciona outra sombra com vírgula
+            - A primeira sombra fica por cima da segunda e assim por diante
+
+            */
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
