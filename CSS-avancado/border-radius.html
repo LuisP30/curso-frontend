@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Border Radius</title>
+    <style>
+        div{
+            background-color: orange;
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+
+            /* Atribuindo mais de um valor */
+            border-radius: 50px 100px;
+
+            /* Elipses */
+            border-radius: 50px / 20px;
+            /* 
+            - 50px é o eixo horizontal 
+            - 20px é o eixo vertical
+            */
+            border-radius: 70px 20px 0px 80px / 100px 50px 0 20px;
+            /* 
+            - Valores da esquerda definem os raios horizontais
+            - Valores da direita definem os raios verticais
+            */
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
