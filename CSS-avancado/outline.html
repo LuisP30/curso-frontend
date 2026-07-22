@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outline</title>
+    <style>
+        div{
+            width: 200px;
+            height: 100px;
+            background-color: yellow;
+            box-sizing: border-box;
+            margin: 100px auto;
+            
+            outline: 4px dashed red;
+            /* a borda altera o tamanho do elemento */
+            
+        }
+        div:hover{
+            outline-width: 10px;
+            outline-offset: 16px; /* altera distância da borda para o elemento
+            pode trabalhar com valores fixos */
+        }
+    </style>
+</head>
+<body>
+    <div>Outline</div>
+</body>
+</html>
